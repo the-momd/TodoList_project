@@ -1,0 +1,21 @@
+{
+    "name": "the_momd/todolist",
+    "description": "A simple Todolist project(with Ajax,php and mysql)",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TheMomd\\Todolist\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "The-momd",
+            "email": "The_momd@proton.me"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "hekmatinasser/verta": "^8.4"
+    }
+}

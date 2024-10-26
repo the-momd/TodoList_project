@@ -1,9 +1,10 @@
+<!-- <?php echo implode('-', $tasks) . rand(0,9999);?> -->
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Task manager UI</title>
-  <link rel="stylesheet" href="./style.css">
+  <title><?= SITE_TITLE ?></title>
+  <link rel="stylesheet" href="<?=BASE_URL?>assets/css/style.css">
 
 </head>
 <body>
@@ -71,7 +72,7 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="assets/js/script.js"></script>
 
 </body>
 </html>
