@@ -12,6 +12,20 @@ body {
   font-smoothing: antialiased;
 }
 
+input {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+  padding: 5px 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding: 1px 7px;
+  text-align: center;
+}
+
 .page {
   position: absolute;
   width: 80%;

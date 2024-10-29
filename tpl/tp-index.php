@@ -1,10 +1,9 @@
-<!-- <?php echo implode('-', $tasks) . rand(0,9999);?> -->
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title><?= SITE_TITLE ?></title>
-  <link rel="stylesheet" href="<?=BASE_URL?>assets/css/style.css">
+  <link rel="stylesheet" href="<?=BASE_URL?>/assets/css/style.css">
 
 </head>
 <body>
@@ -12,7 +11,7 @@
 <div class="page">
   <div class="pageHeader">
     <div class="title">Dashboard</div>
-    <div class="userPanel"><i class="fa fa-chevron-down"></i><span class="username">John Doe </span><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg" width="40" height="40"/></div>
+    <div class="userPanel"><i class="fa fa-chevron-down"></i><span class="username"> Mohamad Amiri </span><img src="tpl/img.jpg" width="40" height="40"/></div>
   </div>
   <div class="main">
     <div class="nav">
@@ -22,14 +21,18 @@
         </div>
       </div>
       <div class="menu">
-        <div class="title">Navigation</div>
+        <div class="title">Folders</div>
         <ul>
-          <li> <i class="fa fa-home"></i>Home</li>
-          <li><i class="fa fa-signal"></i>Activity</li>
-          <li class="active"> <i class="fa fa-tasks"></i>Manage Tasks</li>
-          <li> <i class="fa fa-envelope"></i>Messages</li>
+          <?php foreach($folders as $folder): ?>
+          <li> <i class="fa fa-folder"></i> <?= $folder->name ?> </li>
+          <?php endforeach; ?>
+          <li class="active"> <i class="fa fa-folder-open"></i>Current Folder</li>
         </ul>
       </div>
+      <div>
+        <input type="text" id="newFolderInput" placeholder="Add New Folder" style="width: 70%; margin-left: 8%; border-radius: 3px;"/>
+        <button class="btn" id="newFolderBtn" style="padding: 1px 7px; text-align: center;">+</button>
+        </div>
     </div>
     <div class="view">
       <div class="viewHeader">
@@ -72,7 +75,7 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="assets/js/script.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
