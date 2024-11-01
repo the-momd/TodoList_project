@@ -1,9 +1,9 @@
 <?php
 
-include "bootstrap/constans.php";
-include "bootstrap/config.php";
-include "vendor/autoload.php";
-include "libs/lib-helpers.php";
+include  "constans.php";
+include BASE_PATH . "bootstrap/config.php";
+include BASE_PATH . "vendor/autoload.php";
+include BASE_PATH . "libs/lib-helpers.php";
 
 
 try {
@@ -12,8 +12,8 @@ try {
     diePage("Connection failed: " . $e->getMessage());
     
 }
+
+include BASE_PATH . "libs/lib-auth.php";
+include BASE_PATH . "libs/lib-tasks.php";
+
 // echo "Connection to the database is OK";
-
-include "libs/lib-auth.php";
-include "libs/lib-tasks.php";
-

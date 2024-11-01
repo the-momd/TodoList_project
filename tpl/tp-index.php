@@ -22,16 +22,19 @@
       </div>
       <div class="menu">
         <div class="title">Folders</div>
-        <ul>
+        <ul class="folder-list">
           <?php foreach($folders as $folder): ?>
-          <li> <i class="fa fa-folder"></i> <?= $folder->name ?> </li>
+          <li>
+          <a style="text-decoration: none;" href="?folder_id=<?= $folder->id ?>"><i class="fa fa-folder"></i> <?= $folder->name ?> </a>
+          <a style="text-decoration: none;" class="remove" href="?delete_folder=<?= $folder->id ?>">x</a>
+          </li>
           <?php endforeach; ?>
           <li class="active"> <i class="fa fa-folder-open"></i>Current Folder</li>
         </ul>
       </div>
       <div>
-        <input type="text" id="newFolderInput" placeholder="Add New Folder" style="width: 70%; margin-left: 8%; border-radius: 3px;"/>
-        <button class="btn" id="newFolderBtn" style="padding: 1px 7px; text-align: center;">+</button>
+        <input type="text" id="addFolderInput" placeholder="Add New Folder" style="width: 70%; margin-left: 8%; border-radius: 3px;"/>
+        <button class="btn clickable" id="addFolderBtn" style="padding: 5px 5px; border-radius: 3px; border: 1px solid #ccc; padding: 1px 7px; text-align: center;">+</button>
         </div>
     </div>
     <div class="view">
@@ -76,6 +79,25 @@
 </div>
 <!-- partial -->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-
+  <script src="assets/js/script.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#addFolderBtn').click(function(e){
+        var input = $('input#addFolderInput');
+        $.ajax({
+          url: 'process/ajaxHandler.php',
+          method: 'post',
+          data: {action: "addFolder", folderName: input.val()},
+          success: function(response){
+            if(response = '1'){
+              $('<li> <a style="text-decoration: none;" href="#"><i class="fa fa-folder"></i>'+input.val()+'</a></li>').appendTo('ul.folder-list');
+            } else {
+              alert(response);
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

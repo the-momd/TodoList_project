@@ -12,7 +12,7 @@ body {
   font-smoothing: antialiased;
 }
 
-input {
+.input {
     padding: 8px 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -24,6 +24,16 @@ input {
   border: 1px solid #ccc;
   padding: 1px 7px;
   text-align: center;
+}
+a.remove {
+  color: red !important;
+  float: right;
+  padding-right: 5px;
+  
+}
+a.remove:hover {
+  font-weight: 700px;
+  font-size: bold; 
 }
 
 .page {
@@ -133,6 +143,10 @@ input {
 }
 .main .nav .menu ul {
   padding-left: 0px;
+}
+.main .nav .menu ul li a {
+  text-decoration: none;
+  color: #0c7388;
 }
 .main .nav .menu ul li {
   cursor: pointer;
@@ -280,4 +294,9 @@ input {
 
 .clear {
   clear: both;
+}
+
+.clickable:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
