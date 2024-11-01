@@ -1,5 +1,7 @@
 <?php
 
+defined('BASE_PATH') OR die("premition denied!");
+
 /*** Auth Functions ***/
 
 function getCurrentUserId(){

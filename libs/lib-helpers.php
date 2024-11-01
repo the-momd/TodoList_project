@@ -1,5 +1,7 @@
 <?php
 
+defined('BASE_PATH') OR die("premition denied!");
+
 function getCurrentUrl(){
     return 1;
 }

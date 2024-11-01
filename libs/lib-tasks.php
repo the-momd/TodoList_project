@@ -1,5 +1,13 @@
 <?php
 
+defined('BASE_PATH') OR die("premition denied!");
+
+// if(!defined('BASE_PATH')){
+//     echo "premition denied!";
+//     die();
+// }
+
+
 /*** Folder Functions  ***/
 
 function deleteFolder($folder_id){
