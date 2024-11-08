@@ -161,7 +161,7 @@ a.remove:hover {
   border-radius: 4px;
   transition: 0.25s all;
 }
-.main .nav .menu ul li.active {
+.main .nav .menu ul li.active a {
   color: #79BC46;
 }
 .main .nav .menu ul li:hover {
