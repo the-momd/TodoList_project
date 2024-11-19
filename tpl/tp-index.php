@@ -11,7 +11,10 @@
 <div class="page">
   <div class="pageHeader">
     <div class="title">Dashboard</div>
-    <div class="userPanel"><i class="fa fa-chevron-down"></i><span class="username"> Mohamad Amiri </span><img src="<?=BASE_URL?>/tpl/img.jpg" width="40" height="40"/></div>
+    <div class="userPanel">
+    <a href="<?= site_url("?logout=1") ?>"><i class="fa fa-sign-out"></i></a>
+    <span class="username"> <?= $user->name ?? 'Unknown'; ?> </span>
+    <img src="<?= $user->image; ?>" width="40" height="40"/></div>
   </div>
   <div class="main">
     <div class="nav">
